@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div #main {
+    text-align: center;
+}
+
+#nav {
+    background-color: #418bc9;
+    padding: 8px;
+}
+
+#nav li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 4px 12px;
+    list-style-type: none;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+span {
+    color: #fff;
+}
+
+#calendar {
+    background-color: #efefee;
+    padding: 12px 4px;
+    text-align: left;
+    font-size: 16px;
+    left: 0;
+    right: 0;
+}
+
+div #time {
+    display: inline-block;
+}
+
+div #search {
+    height: 100%;
+    float: right;
+    padding: 0px 16px;
+}
+
+#content {
+    display: flex;
+}
+
+div #box-1 {
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 20%;
+    margin: 4px 0;
+}
+
+#side-bar {
+    background-color: #1e5f9d;
+    width: 100%;
+}
+
+#side-bar li {
+    padding: 4px;
+    list-style-type: none;
+}
+
+#side-bar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div #box-2 {
+    width: 60%;
+    margin: 4px;
+}
+
+div #box-2-1 {
+    width: 100%;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+div #box-2 #text-main {
+    width: 60%;
+}
+
+div #box-2 .list {
+    width: 40%;
+}
+
+#box-2 #text-main #study {
+    font-size: 20px;
+    color: #2d6aa3;
+    padding-bottom: 16px;
+}
+
+div #box-2-2 {
+    padding: 2px 4px;
+}
+
+div #box-2-3 {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div #box-2-3 > h4 {
+}
+
+div #box2-3-content-1 {
+    width: 60%;
+}
+
+#text-main {
+    width: 50px;
+}
+
+div .list .pic {
+    width: 80px;
+}
+
+div #box-3 {
+    width: 20%;
+    padding: 4px;
+    margin: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
