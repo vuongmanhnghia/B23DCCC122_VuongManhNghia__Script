@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* #main {
+    width: 1100px;
+} */
+
+div #header {
+    height: 60px;
+}
+
+div #logo {
+    height: 100%;
+    display: inline-block;
+    padding: 0 12px;
+}
+
+div #search {
+    float: right;
+}
+
+#search-box {
+    background-color: #f2f5fa;
+    float: right;
+    padding: 8px 12px;
+    border: 1px solid #000;
+    border-radius: 24px;
+}
+
+#search-box #search-text {
+    border: none;
+    outline: none;
+    background-color: #f2f5fa;
+    /* padding: 10px 50px 10px 15px; */
+}
+
+#search-box #search-button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: none;
+}
+
+div #nav {
+    background-color: #186d01;
+    padding: 8px 4px;
+    text-align: center;
+}
+
+div #nav li {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#slide {
+    padding: 0 4px;
+    width: 100%;
+}
+
+#view {
+    display: flex;
+    padding: 0 8px;
+}
+
+#box-1 {
+    width: 75%;
+    background-color: #fff;
+}
+
+#box-1 #content {
+    display: flex;
+}
+
+#box-1 #text-content {
+    width: 60%;
+    margin: 0 8px;
+}
+
+#box-1 #taskbar {
+    width: 30%;
+    margin: 8px;
+    margin-right: 24px;
+}
+
+#box-1 #text-content h3 {
+    padding: 12px 4px;
+}
+
+#box-1 #text-content p {
+    padding: 0px 4px;
+}
+
+#box-1 #text-content ul {
+    padding: 12px 0;
+    padding-left: 20px;
+}
+
+#box-1 #text-content li::marker {
+    color: #207019;
+}
+
+#box-1 #taskbar {
+    width: 40%;
+    border-left: 1px solid #ccc;
+}
+
+#box-1 #taskbar ul {
+    margin-left: 28px;
+}
+
+#box-1 #taskbar li {
+    padding: 6px 0;
+}
+
+#box-1 #taskbar li:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+
+#box-1 #taskbar li::marker {
+    color: #195cc7;
+}
+
+#box-1 #taskbar a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#box-1 #more {
+    display: flex;
+    box-sizing: border-box;
+    margin-right: 24px;
+}
+
+#box-1 #more .image {
+    padding: 8px;
+}
+
+#box-1 #more a {
+    padding: 12px 0;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#box-2 {
+    width: 25%;
+    background-color: #fff;
+}
