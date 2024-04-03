@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function getFactorial(number) {
+                if (number === 0) {
+                    return 0;
+                } else {
+                    var result = 1;
+                    for (var i = number; i > 1; i--) {
+                        result *= i;
+                    }
+                }
+                return result;
+            }
+            document.write(getFactorial(5));
+        </script>
+    </body>
+</html>

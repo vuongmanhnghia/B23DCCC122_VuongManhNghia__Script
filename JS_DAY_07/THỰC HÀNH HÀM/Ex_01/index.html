@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function getInfo(fullName, maSV) {
+                this.fullName = fullName;
+                this.maSV = maSV;
+            }
+            function writeInfo(info) {
+                document.write(`Họ và tên: ${info.fullName}<br>`);
+                document.write(`Mã sinh viên: ${info.maSV}`);
+            }
+            writeInfo(new getInfo("Vuong Manh Nghia", "B23DCCC122"));
+        </script>
+    </body>
+</html>
