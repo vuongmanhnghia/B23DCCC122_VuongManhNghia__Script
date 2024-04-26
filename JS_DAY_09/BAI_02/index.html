@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bài 2</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			input {
+				padding: 5px 10px;
+			}
+			button {
+				padding: 5px 10px;
+			}
+			li {
+				display: block;
+				margin-left: 15px;
+				/* padding: 5px 10px; */
+				cursor: pointer;
+				list-style-type: disc;
+			}
+		</style>
+		<h1>Bài thực hành 2</h1>
+		<input type="text" />
+		<button id="click">Thêm nhiệm vụ</button>
+		<script>
+			$(document).ready(function () {
+				$("#click").on("click", function () {
+					$("body").append("<li>" + $("input").val() + "</li>");
+				});
+				$("body").on("click", "li", function () {
+					$(this).css("color", "red");
+				});
+			});
+		</script>
+	</body>
+</html>
