@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dề 01</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #fff;
+			}
+			#container {
+				position: relative;
+				box-shadow: 0 5px 10px rbga(0, 0, 0, 0.1);
+				border-radius: 12px;
+				padding: 20px 30px 120px;
+				background: #353f9f;
+			}
+
+			#container h1 {
+				color: #fff;
+				font-size: 24px;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+
+			#container label {
+				font-size: 18px;
+				color: #fff;
+				width: 100%;
+				height: 40px;
+				border: none;
+			}
+
+			#container input {
+				width: 100%;
+				height: 40px;
+				border: none;
+				border-radius: 5px;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			#container button {
+				margin-bottom: 10px;
+				width: 100%;
+				height: 40px;
+				border: none;
+				border-radius: 5px;
+				background: #fff;
+				color: #000;
+				font-size: 16px;
+				cursor: pointer;
+			}
+
+			#result {
+				font-size: 24px;
+				position: absolute;
+				bottom: 50px;
+				left: 30px;
+				color: #fff;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Calculator</h1>
+			<div id="input">
+				<label class="number" for="inputA">Input A</label>
+				<input type="number" id="inputA" />
+				<label class="number" for="inputB">Input B</label>
+				<input type="number" id="inputB" />
+			</div>
+			<div id="button">
+				<button id="sum" onclick="sum()">SUM</button>
+				<button id="subtract" onclick="subtract()">SUBTRACT</button>
+				<button id="multiply" onclick="multiply()">MULTIPLY</button>
+				<button id="divide" onclick="divide()">DIVIDE</button>
+				<button id="reset" onclick="reset()">RESET</button>
+			</div>
+			<div id="result">
+				<p id="result"></p>
+			</div>
+		</div>
+		<script>
+			var sum = () => {
+				var a = parseFloat(document.getElementById("inputA").value);
+				var b = parseFloat(document.getElementById("inputB").value);
+				var result = document.getElementById("result");
+				if (isNaN(a) || isNaN(b)) {
+					result.innerHTML = "Please enter a valid number";
+				} else {
+					result.innerHTML = a + b;
+				}
+			};
+			var subtract = () => {
+				var a = parseFloat(document.getElementById("inputA").value);
+				var b = parseFloat(document.getElementById("inputB").value);
+				var result = document.getElementById("result");
+				if (isNaN(a) || isNaN(b)) {
+					result.innerHTML = "Please enter a valid number";
+				} else {
+					result.innerHTML = a - b;
+				}
+			};
+
+			var multiply = () => {
+				var a = parseFloat(document.getElementById("inputA").value);
+				var b = parseFloat(document.getElementById("inputB").value);
+				var result = document.getElementById("result");
+				if (isNaN(a) || isNaN(b)) {
+					result.innerHTML = "Please enter a valid number";
+				} else {
+					result.innerHTML = a * b;
+				}
+			};
+			var divide = () => {
+				var a = parseFloat(document.getElementById("inputA").value);
+				var b = parseFloat(document.getElementById("inputB").value);
+				var result = document.getElementById("result");
+				if (isNaN(a) || isNaN(b)) {
+					result.innerHTML = "Please enter a valid number";
+				} else {
+					if (b == 0) {
+						result.innerHTML = "Cannot divide by zero";
+					} else {
+						result.innerHTML = a / b;
+					}
+				}
+			};
+
+			var reset = () => {
+				document.getElementById("inputA").value = "";
+				document.getElementById("inputB").value = "";
+				document.getElementById("result").innerHTML = "";
+			};
+		</script>
+	</body>
+</html>

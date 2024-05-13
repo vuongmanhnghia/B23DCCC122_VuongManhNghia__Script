@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	</head>
+	<body>
+		<div id="slide">
+			<div id="list-img">
+				<img
+					src="https://wallpapers.com/images/hd/4k-laptop-luminous-blue-flower-25a78tme4h8q2qr6.jpg"
+					alt="" />
+				<img src="https://wallpaperaccess.com/full/38636.jpg" alt="" />
+				<img
+					src="https://wallpapers.com/images/hd/4k-laptop-purple-circuits-cyv22688sn7a00uu.jpg"
+					alt="" />
+				<img src="https://wallpapercave.com/wp/wp5485316.png" alt="" />
+				<img src="https://wallpaperaccess.com/full/862917.jpg" alt="" />
+			</div>
+			<div id="btns">
+				<div class="btn" id="left">
+					<i class="fa-solid fa-chevron-left"></i>
+				</div>
+				<div class="btn" id="right">
+					<i class="fa-solid fa-chevron-right"></i>
+				</div>
+			</div>
+		</div>
+		<script>
+			let listImg = document.getElementById("list-img");
+			let current = 0;
+			$(document).ready(function () {
+				let imgs = $("#list-img img");
+				let event = function () {
+					current++;
+					if (current == imgs.length) {
+						current = 0;
+					}
+					let width = imgs[0].offsetWidth;
+					listImg.style.transform = `translateX(-${width * current}px)`;
+				};
+				setInterval(event, 5000);
+				$("#left").click(function () {
+					clearInterval(event);
+					current--;
+					if (current < 0) {
+						current = imgs.length - 1;
+					}
+					let width = imgs[0].offsetWidth;
+					listImg.style.transform = `translateX(-${width * current}px)`;
+					event = setInterval(event, 5000);
+				});
+				$("#right").click(function () {
+					clearInterval(event);
+					current++;
+					if (current == imgs.length) {
+						current = 0;
+					}
+					let width = imgs[0].offsetWidth;
+					listImg.style.transform = `translateX(-${width * current}px)`;
+					event = setInterval(event, 5000);
+				});
+			});
+		</script>
+	</body>
+</html>
